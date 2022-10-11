@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* fontfamily */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -199,7 +199,7 @@ nav { margin-right: 3%; }
   font-size: 56px;
   font-weight: 500;
   text-transform: capitalize;
-  text-shadow: 2px 2px 3px rgb(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgb(0,0,0,.6);
 }
 
 .para1 { 
@@ -210,9 +210,239 @@ nav { margin-right: 3%; }
 .para1,.para2 {
   font-size: 20px;
   text-align: center;
-  text-shadow: 2px 2px 3px rgb(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgb(0,0,0,.6);
 }
 /* banner section end */
+/* what we do section start */
+.whatWeDo {
+  padding: 20px 0;
+  margin: 32px 0;
+}
+.whatWeDo .info { padding: 32px 0; }
+
+.whatWeDo h3 {
+  padding: 20px 0;
+  color: rgb(52,118,168);
+  font-size: 42px;
+  text-transform: capitalize;
+}
+
+.whatWeDo .info p { padding-right: 1.4%; }
+
+.whatWeDo p {
+  padding: 10px 0;
+  color: rgb(85, 86, 87);
+  font-size: 18px; 
+  font-weight: 500;
+  letter-spacing: .2px;
+  line-height: 1.9;
+}
+
+.whatWeDo p a { color: rgb(52,118,168); text-transform: capitalize; }
+
+.whatWeDo p a:hover { text-decoration: underline; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 40px;
+}
+
+.card-list {
+  padding: 45px 0;
+  flex-basis: 48%;
+  display: flex;
+  gap: 0 20px;
+}
+
+.card-info {
+  padding: 0 4%;
+}
+
+.card-info h4 {
+  padding-bottom: 26px;
+  color: rgb(52,118,168);
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.card-logo span {
+  display: block;
+  color: rgb(52,118,168);
+  text-indent: -9999px;
+}
+
+.card-logo span::before {
+  text-indent: 0;
+  font-family: 'FontAwesome';
+  font-size: 50px;
+  float: left;
+}
+
+.market-icon::before { content: '\e0e3'; }
+.support-icon::before { content: '\f27a'; }
+.security-icon::before { content: '\f577'; }
+.user-icon::before { content: '\f0c0'; }
+
+.card-info p { 
+  padding: 0;
+  font-size: 17px;
+}
+
+.card-info span { font-weight: bold; }
+.card-btn { padding: 35px 0 20px 0; }
+
+.card-btn a {
+  padding: 13px 28px;
+  background: rgb(52,118,168);
+  color: rgb(255,255,255);
+  font-size: 19px;
+  text-transform: capitalize;
+  transition: all .5s ease;
+}
+
+.card-btn a:hover {
+  background: rgb(81, 150, 202);
+}
+/* what we do section end */
+/* testimonial section start */
+.testimonials {
+  padding: 35px 0 45px 0;
+  position: relative;
+  background: url('../template\ image/infinite-loop-02.jpg') no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: rgb(255,255,255);
+}
+
+.testimonials .info {
+  padding: 33px 0;
+  text-align: center;
+}
+
+.testimonials h3 { 
+  padding: 30px 0;
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.testimonials .info p {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.staff-cards { 
+  width: 80%;
+  padding: 30px 0 30px 0;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  gap: 70px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.staff-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.staff-list {
+  flex-basis: 28%;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+.staff-list figure {
+  width: 125px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.staff-list img { border-radius: 50%; }
+
+.staff-list p {
+  padding: 10px 0 20px 0;
+  line-height: 1.8;
+}
+
+.staff-list h4 {
+  text-align: right;
+  font-size: 19px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.slide-controls {
+  padding: 25px 0 45px 0;
+  margin: 10px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.slide-btn {
+  text-indent: -9999px;
+  display: block;
+}
+
+.slide-btn::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  text-indent: 0;
+  float: left;
+  background: rgb(153,164,170);
+  cursor: pointer;
+}
+
+.active-btn::before { background: rgb(255,255,255); }
+
+.nextPrev-btns {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  justify-content: space-between;
+}
+
+.prev-btn a,.next-btn a{
+  text-indent: -9999px;
+  color: rgb(255,255,255);
+}
+
+.prev-btn a::before,.next-btn a::before {
+  text-indent: 0;
+  font-family: 'FontAwesome';
+  font-size: 40px;
+  text-shadow: 1px 1px 5px rgb(0,0,0,.6);
+  transition: all .5 ease;
+}
+
+.prev-btn a::before {
+  content: '\f137';
+  float: left;
+}
+
+.next-btn a::before {
+  content: '\f138';
+  float: right;
+}
+
+.prev-btn a:hover::before,.next-btn a:hover::before {
+  color: rgb(201, 205, 207);
+}
+
+/* testimonial section end */
 
 /*=================================
   main styling ends here
