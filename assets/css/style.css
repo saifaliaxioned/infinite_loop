@@ -519,6 +519,48 @@ nav { margin-right: 3%; }
   top: 60%;
 }
 /* gallery section end */
+/* contact section start */
+.contact {
+  padding: 20px 0 0 0;
+  margin: 20px 0 0 0;
+  position: relative;
+  background: url('../template\ image/infinite-loop-03.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.contact .wrapper {
+  width: 75%;
+}
+
+.contact .info {
+  padding: 33px 0;
+  text-align: center;
+}
+
+.contact h3 { 
+  padding: 30px 0;
+  color: rgb(255,255,255);
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.contact .info p {
+  width: 98%;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  color: rgb(255,255,255);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* contact section end */
 
 /*=================================
   main styling ends here
@@ -527,12 +569,10 @@ nav { margin-right: 3%; }
 /*=================================
   footer styling starts here
 =================================*/ 
-
-
-
-
-
-
+footer {
+  position: absolute;
+  bottom: 0;
+}
 
  /*=================================
   footer styling ends here
