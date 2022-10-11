@@ -425,7 +425,7 @@ nav { margin-right: 3%; }
   font-family: 'FontAwesome';
   font-size: 40px;
   text-shadow: 1px 1px 5px rgb(0,0,0,.6);
-  transition: all .5 ease;
+  transition: all .5s ease;
 }
 
 .prev-btn a::before {
@@ -438,11 +438,87 @@ nav { margin-right: 3%; }
   float: right;
 }
 
-.prev-btn a:hover::before,.next-btn a:hover::before {
-  color: rgb(201, 205, 207);
+.prev-btn a:hover::before,.next-btn a:hover::before { color: rgb(201, 205, 207); }
+/* testimonial section end */
+/* gallery section start */
+.gallery {
+  position: relative;
+  padding: 17px 0 20px 0;
+  margin: 27px 0 20px 0;
 }
 
-/* testimonial section end */
+.gallery .info {
+  padding: 33px 0;
+  text-align: center;
+}
+
+.gallery h3 { 
+  padding: 30px 0;
+  color: rgb(52,118,168);
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.gallery .info p {
+  width: 50%;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  color: rgb(85, 86, 87);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.gallery-items { 
+  width: 97.8%;
+  padding: 40px 0 30px 0;
+  position: relative;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.gallery-items::-webkit-scrollbar { display: none; }
+
+.gallery-list {
+  flex-basis: 18%;
+  flex-shrink: 0;
+}
+
+.image-controls {
+  padding: 6px 0 45px 0;
+  margin: 10px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.image-btn {
+  text-indent: -9999px;
+  display: block;
+}
+
+.image-btn::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  text-indent: 0;
+  float: left;
+  background: rgb(153,164,170);
+  cursor: pointer;
+}
+
+.activeImage-btn::before { background: rgb(60,160,222); }
+
+.gallery .nextPrev-btns {
+  width: 97%;
+  top: 60%;
+}
+/* gallery section end */
 
 /*=================================
   main styling ends here
