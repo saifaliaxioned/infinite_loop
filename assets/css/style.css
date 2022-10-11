@@ -521,9 +521,8 @@ nav { margin-right: 3%; }
 /* gallery section end */
 /* contact section start */
 .contact {
-  padding: 20px 0 0 0;
+  padding: 20px 0 50px 0;
   margin: 20px 0 0 0;
-  position: relative;
   background: url('../template\ image/infinite-loop-03.jpg') no-repeat center;
   background-size: cover;
 }
@@ -555,11 +554,73 @@ nav { margin-right: 3%; }
   line-height: 2;
 }
 
+.contact-container {
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+form,.contact-source {
+  flex-basis: 42%;
+}
+
 .input-group {
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
 }
 
+.input-group input,textarea {
+  padding: 10px;
+  border: 1px solid rgb(253,250,255);
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  color: rgb(255,255,255);
+  font-size: 19px;
+}
+
+input::placeholder,textarea::placeholder { color: rgb(253,250,255,0.8); }
+
+.input-control { padding: 10px 0; }
+
+.input-control input {
+  width: 50%;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: rgb(51,103,153);
+  color: rgb(255,255,255);
+  font-size: 19px;
+  text-transform: capitalize;
+  transition: all .5s ease;
+}
+
+.input-control input:hover {
+  background: rgb(81, 150, 202);
+}
+
+.err {
+  display: none;
+  padding: 5px 0;
+  color: rgb(255,0 ,0);
+}
+
+input.success { border-color: rgb(60,160,222); }
+input.error { border-color: rgb(255,0 ,0); }
+.show-error { display: block; }
+
+.contact-source {
+  display: flex;
+  flex-direction: column;
+  line-height: 4;
+}
+
+.source-list a {
+  color: rgb(255,255,255);
+  font-size: 19px;
+}
 /* contact section end */
 
 /*=================================
@@ -569,6 +630,10 @@ nav { margin-right: 3%; }
 /*=================================
   footer styling starts here
 =================================*/ 
+.container {
+  position: relative;
+}
+
 footer {
   position: absolute;
   bottom: 0;
