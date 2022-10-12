@@ -162,7 +162,7 @@ nav { margin-right: 3%; }
 }
 
 .nav-list a:hover::before{ width: 100%; }
-.active-list a::before { width: 100%; }
+.active-nav a::before { width: 100%; }
 
 .hamburger {
   border: 1px solid rgb(255,255,255);
@@ -203,9 +203,9 @@ nav { margin-right: 3%; }
 
 .bar::after { top: 6px; }
 
-.hamburger:hover .bar { transform: translate(-50%,-50%) rotate(45deg); }
-.hamburger:hover .bar::before { transform: translateY(6px) rotate(0); }
-.hamburger:hover .bar::after { transform: translateY(-6px) rotate(-90deg); }
+.active-hamburger .bar { transform: translate(-50%,-50%) rotate(45deg); }
+.active-hamburger .bar::before { transform: translateY(6px) rotate(0); }
+.active-hamburger .bar::after { transform: translateY(-6px) rotate(-90deg); }
 /*=================================
   Header styling ends here
 =================================*/  
@@ -787,7 +787,7 @@ footer p { font-size: 15px; }
     transition: all .5s ease;
   }
 
-  .hamburger:hover + nav {
+  .active-hamburger nav {
     left: 0;
     animation: fadeIn .8s ease;
   }
