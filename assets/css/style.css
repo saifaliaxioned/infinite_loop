@@ -688,7 +688,7 @@ input.error { border-color: rgb(255,0 ,0); }
 .call-icon::before { content: '\f87b'; }
 /* contact section end */
 
-.removScroll { overflow-y: hidden; }
+.removeScroll { overflow-y: hidden; }
 
 /*=================================
   main styling ends here
@@ -787,7 +787,7 @@ footer p { font-size: 15px; }
     transition: all .5s ease;
   }
 
-  .active-hamburger nav {
+  .active-hamburger + nav {
     left: 0;
     animation: fadeIn .8s ease;
   }
