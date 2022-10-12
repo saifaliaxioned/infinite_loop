@@ -129,7 +129,6 @@ header .wrapper {
 }
 
 nav { margin-right: 3%; }
-.hamburger { display: none; }
 
 .logo a { 
   font-size: 22px;
@@ -146,7 +145,7 @@ nav { margin-right: 3%; }
   gap: 52px;
 }
 
-.nav-list a {
+.nav-list a { 
   position: relative;
   font-size: 21px;
 }
@@ -165,6 +164,48 @@ nav { margin-right: 3%; }
 .nav-list a:hover::before{ width: 100%; }
 .active-list a::before { width: 100%; }
 
+.hamburger {
+  border: 1px solid rgb(255,255,255);
+  border-radius: 2px;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: none; 
+  cursor: pointer;
+}
+
+.bar {
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  background-color: rgb(255,255,255);
+  border-radius: 4px;
+  text-indent: -99999px;
+  transition: all 0.3s ease;
+  transform: translate(-50%,-50%);
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  background-color: inherit;
+  transition: all .3s ease;
+}
+
+.bar::before { top: -6px; }
+
+.bar::after { top: 6px; }
+
+.hamburger:hover .bar { transform: translate(-50%,-50%) rotate(45deg); }
+.hamburger:hover .bar::before { transform: translateY(6px) rotate(0); }
+.hamburger:hover .bar::after { transform: translateY(-6px) rotate(-90deg); }
 /*=================================
   Header styling ends here
 =================================*/  
@@ -174,16 +215,19 @@ nav { margin-right: 3%; }
 =================================*/
 /* banner section start */
 .banner .wrapper {
+  max-width: 100%;
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
 .banner-content {
+  width: 100%;
   position: absolute;
   top: 46%;
   left: 50%;
   color: rgb(255,255,255);
+  text-align: center;
   transform: translate(-50%,-50%);
 }
 
@@ -408,7 +452,7 @@ nav { margin-right: 3%; }
 .nextPrev-btns {
   width: 90%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: none;
@@ -602,9 +646,7 @@ input::placeholder,textarea::placeholder { color: rgb(253,250,255,0.8); }
   transition: all .5s ease;
 }
 
-.input-control input:hover {
-  background: rgb(81, 150, 202);
-}
+.input-control input:hover { background: rgb(81, 150, 202); }
 
 .err {
   display: none;
@@ -640,19 +682,13 @@ input.error { border-color: rgb(255,0 ,0); }
   float: left;
 }
 
-.chat-icon::before {
-  content: '\f075';
-}
-.mail-icon::before {
-  content: '\f0e0';
-}
-.location-icon::before {
-  content: '\f3c5';
-}
-.call-icon::before {
-  content: '\f87b';
-}
+.chat-icon::before { content: '\f075'; }
+.mail-icon::before { content: '\f0e0'; }
+.location-icon::before { content: '\f3c5'; }
+.call-icon::before { content: '\f87b'; }
 /* contact section end */
+
+.removScroll { overflow-y: hidden; }
 
 /*=================================
   main styling ends here
@@ -661,9 +697,7 @@ input.error { border-color: rgb(255,0 ,0); }
 /*=================================
   footer styling starts here
 =================================*/ 
-.container {
-  position: relative;
-}
+.container { position: relative; }
 
 footer {
   width: 100%;
@@ -681,9 +715,159 @@ footer p { font-size: 15px; }
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1280 starts here*/
+@media only screen and (max-width: 1280px) {
+  /* whatWeDo section start */
+  .cards { gap: 0 4px; }
+  .card-info p { font-size: 15px; }
+  /* whatWeDo section end */
+
+  /* contact section start */
+  .contact .wrapper { width: 81%; }
+  /* contact section end */
+
+  /* testimonials section start */
+  .staff-cards { width: 94%; }
+  /* testimonials section end */
+}
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  /* header start */
+  .nav-items { gap: 27px; }
+  .nav-list a { font-size: 20px; }
+  /* header end */
 
+  /* whatWeDo section start */
+  .card-info h4 { font-size: 30px; }
+  .card-logo span::before { font-size: 40px; }
+  /* whatWeDo section end */
 
+  /* nextPrevious-btn */
+  .nextPrev-btns { display: flex; }
 
+  /* testimonials section start */
+  .staff-list { flex-basis: 43%; }
+  .slide-controls { display: none; }
+  .testimonials .info p,.gallery .info p,.contact .info p { width: 100%; }
+  /* testimonials section end */
+
+  /* gallery section start */
+  .gallery-items {
+    width: 94%;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  .gallery-list { flex-basis: 30%; }
+  .image-controls { display: none; }
+  .gallery .nextPrev-btns { top: 69%; }
+  /* gallery section end */
+
+  /* contact section start */
+  .contact-container { gap: 74px; }
+  /* contact section end */
 }  
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  /* header start */
+  .hamburger {
+    padding: 5px;
+    display: block;
+    z-index: 3;
+  }
+
+  nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: rgb(0,0,0,0.8);
+    transition: all .5s ease;
+  }
+
+  .hamburger:hover + nav {
+    left: 0;
+    animation: fadeIn .8s ease;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; background-color: none; }
+    100% { opacity: 100%; background-color: rgb(0,0,0,0.8); }
+  }
+  
+  .nav-items {
+    width: inherit;
+    height: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .nav-list a { font-size: 23px; }
+  /* header end */
+
+  /* whatWeDo section start */
+  .card-list {
+    flex-basis: 100%;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-logo span::before { font-size: 57px; }
+  /* whatWeDo section end */
+
+  /* gallery section start */
+  .gallery-items {
+    width: 88%;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  /* gallery section end */
+
+  /* contact section start */
+  form,.contact-source { flex-basis: 100%; }
+  /* contact section end */
+}
+
+/*media query for 640px starts here*/
+@media only screen and (max-width: 640px) {
+
+  .staff-list {
+   flex-basis: 95%;
+   text-align: center;
+  }
+
+  /* gallery section start */
+  .gallery-items { width: 88.8%; }
+  .gallery-list { flex-basis: 47%; }
+  /* gallery section end */
+
+  /* contact section start */
+  .contact-container { margin: 0px 0 13px 0; }
+  /* contact section end */
+}
+
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px) {
+  /* banner section start */
+  .banner-content h2 { font-size: 40px; }
+  .para1, .para2 { font-size: 17px; }
+  /* banner section end */
+
+  /* gallery section start */
+  .gallery-items { width: 65%; }
+  .gallery-list { flex-basis: 100%; }
+  /* gallery section end */
+
+  /* contact section start */
+  .testimonials .info p,.gallery .info p,.contact .info p { font-size: 12px; }
+  /* contact section end */
+
+  /* footer start */
+  footer p { font-size: 10px; }
+  /* footer end */
+}
