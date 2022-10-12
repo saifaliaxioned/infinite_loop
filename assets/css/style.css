@@ -521,14 +521,15 @@ nav { margin-right: 3%; }
 /* gallery section end */
 /* contact section start */
 .contact {
-  padding: 20px 0 50px 0;
-  margin: 20px 0 0 0;
+  padding: 17px 0 50px 0;
+  margin: 5px 0 0 0;
   background: url('../template\ image/infinite-loop-03.jpg') no-repeat center;
   background-size: cover;
 }
 
 .contact .wrapper {
   width: 75%;
+  padding-bottom: 25px;
 }
 
 .contact .info {
@@ -537,7 +538,7 @@ nav { margin-right: 3%; }
 }
 
 .contact h3 { 
-  padding: 30px 0;
+  padding: 14px 0 30px 0;
   color: rgb(255,255,255);
   font-size: 40px;
   font-weight: 500;
@@ -555,14 +556,14 @@ nav { margin-right: 3%; }
 }
 
 .contact-container {
-  padding-bottom: 30px;
+  padding: 18px 0 40px 0;
+  margin: 0 0 50px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 90px;
 }
-form,.contact-source {
-  flex-basis: 42%;
-}
+
+form,.contact-source { flex-basis: 44%; }
 
 .input-group {
   padding: 10px 0;
@@ -571,7 +572,7 @@ form,.contact-source {
 }
 
 .input-group input,textarea {
-  padding: 10px;
+  padding: 11px 16px;
   border: 1px solid rgb(253,250,255);
   border-radius: 5px;
   outline: none;
@@ -580,19 +581,23 @@ form,.contact-source {
   font-size: 19px;
 }
 
+.input-group textarea {
+  height: 259px;
+}
+
 input::placeholder,textarea::placeholder { color: rgb(253,250,255,0.8); }
 
 .input-control { padding: 10px 0; }
 
 .input-control input {
-  width: 50%;
-  padding: 10px 40px;
+  width: 55%;
+  padding: 10px 0;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   outline: none;
   background: rgb(51,103,153);
   color: rgb(255,255,255);
-  font-size: 19px;
+  font-size: 18px;
   text-transform: capitalize;
   transition: all .5s ease;
 }
@@ -614,12 +619,38 @@ input.error { border-color: rgb(255,0 ,0); }
 .contact-source {
   display: flex;
   flex-direction: column;
-  line-height: 4;
+}
+
+.source-list {
+  padding-top: 10px;
+  margin-bottom: 40px;
 }
 
 .source-list a {
   color: rgb(255,255,255);
-  font-size: 19px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.source-list a::before {
+  margin-right: 5%;
+  font-family: 'FontAwesome';
+  font-size: 36px;
+  float: left;
+}
+
+.chat-icon::before {
+  content: '\f075';
+}
+.mail-icon::before {
+  content: '\f0e0';
+}
+.location-icon::before {
+  content: '\f3c5';
+}
+.call-icon::before {
+  content: '\f87b';
 }
 /* contact section end */
 
@@ -635,9 +666,15 @@ input.error { border-color: rgb(255,0 ,0); }
 }
 
 footer {
+  width: 100%;
+  padding: 60px 0 30px 0;
   position: absolute;
   bottom: 0;
+  color: rgb(255,255,255);
+  text-align: center;
 }
+
+footer p { font-size: 15px; }
 
  /*=================================
   footer styling ends here
