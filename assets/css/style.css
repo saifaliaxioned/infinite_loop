@@ -654,8 +654,8 @@ input::placeholder,textarea::placeholder { color: rgb(253,250,255,0.8); }
   color: rgb(255,0 ,0);
 }
 
-input.success { border-color: rgb(60,160,222); }
-input.error { border-color: rgb(255,0 ,0); }
+input.success,textarea.success { border-color: rgb(60,160,222); }
+input.error,textarea.error { border-color: rgb(255,0 ,0); }
 .show-error { display: block; }
 
 .contact-source {
