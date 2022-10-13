@@ -4,10 +4,15 @@ var slideBtn = document.querySelectorAll('.slide-btn');
 var hamburger = document.querySelector('.hamburger');
 var nextBtn = document.querySelector('.next-btn');
 var prevBtn = document.querySelector('.prev-btn');
+var galleryList = document.querySelectorAll('.gallery-list img');
+var galleryModal = document.querySelector('.modalDiv');
+var modalImage =  document.querySelector('.modalDiv img')
+var submitModal = document.querySelector('.submitModal');
 var inputName = document.querySelector('#name');
 var email = document.querySelector('#email');
 var textArea = document.querySelector('#textarea');
 var form = document.querySelector('#contactForm');
+var submitBtn = document.querySelector('.input-control input');
 var stringPattern = /^[a-zA-Z]+$/g;
 var messagePattern = /^[a-zA-Z\s]+$/g;
 var emailPattern = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
@@ -77,9 +82,10 @@ if (window.innerWidth > 769 && window.innerWidth <= 995) {
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   var activeErrors = document.querySelectorAll('.show-error');
-  console.log(activeErrors.length);
   if (inputName.value  && textArea.value && email.value  && (activeErrors.length == 0)) {
-    alert('submitted');
+    console.log('submitted');
+    submitModal.classList.remove('hide-content');
+    document.documentElement.classList.add('removeScroll');
   } else {
     console.log('fill required fields');
     validateError(inputName, stringPattern, "*whitespace and numbers are not allowed", 3);
@@ -146,9 +152,31 @@ function validateError(input, pattern, message, Length = '') {
       }
     }
   }
-}
+};
 
+// image modal function
+galleryList.forEach(function (list) {
+  list.addEventListener('click', function () {
+    var imageSource = list.src;
+    modalImage.src = imageSource;
+    galleryModal.classList.remove('hide-content');
+    document.documentElement.classList.add('removeScroll');
+  });
+});
 
+galleryModal.addEventListener('click', function (e) {
+  if (e.target === galleryModal || e.target === galleryModal.children[0].children[0]) {
+    galleryModal.classList.add('hide-content');
+    document.documentElement.classList.remove('removeScroll');
+  };
+});
+
+submitModal.addEventListener('click', function (e) {
+  if (e.target === submitModal || e.target === submitModal.children[0].children[1]) {
+    submitModal.classList.add('hide-content');
+    document.documentElement.classList.remove('removeScroll');
+  };
+});
 
 
 
