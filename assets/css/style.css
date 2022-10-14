@@ -361,6 +361,11 @@ nav { margin-right: 3%; }
   color: rgb(255,255,255);
 }
 
+.testimonials .wrapper {
+  padding-bottom: 50px;
+  margin-bottom: 59px;
+}
+
 .testimonials .info {
   padding: 33px 0;
   text-align: center;
@@ -388,19 +393,23 @@ nav { margin-right: 3%; }
   position: relative;
   display: flex;
   gap: 70px;
-  overflow-x: auto;
-  scrollbar-width: none;
 }
 
-.staff-cards::-webkit-scrollbar {
-  display: none;
+.slick-list { margin: 0 -30px; }
+.slick-slide { margin: 0 30px; }
+.slick-dots li { margin: 0 13px; }
+.slick-dots { bottom: -45px; }
+.slick-dots li.slick-active button:before {
+  color: rgb(255,255,255);
+  opacity: 1;
+}
+.slick-dots li button:before {
+  color: rgb(152,163,168);
+  font-size: 18px;
+  opacity: 1;
 }
 
-.staff-list {
-  flex-basis: 28%;
-  flex-shrink: 0;
-  font-weight: 500;
-}
+.staff-list { font-weight: 500; }
 
 .staff-list figure {
   width: 125px;
