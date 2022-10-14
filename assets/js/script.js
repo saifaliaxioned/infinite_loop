@@ -126,6 +126,7 @@ $('.staff-cards').slick({
   dots: true,
   arrows: false,
   infinite: true,
+  autoplay: true,
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 3,
@@ -150,7 +151,7 @@ $('.staff-cards').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 540,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -158,9 +159,46 @@ $('.staff-cards').slick({
         dots: false
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
+  ]
+});
+
+$('.gallery-items').slick({
+  dots: true,
+  arrows: false,
+  infinite: true,
+  autoplay: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 995,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 540,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false
+      }
+    }
   ]
 });
 
