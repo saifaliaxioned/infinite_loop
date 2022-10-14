@@ -11,10 +11,10 @@ var galleryList = document.querySelectorAll('.gallery-list img');
 var galleryModal = document.querySelector('.modalDiv');
 var modalImage = document.querySelector('.modalDiv img');
 var submitModal = document.querySelector('.submitModal');
-var inputName = document.querySelector('#name');
-var email = document.querySelector('#email');
-var textArea = document.querySelector('#textarea');
-var form = document.querySelector('#contactForm');
+var inputName = document.querySelector('.name');
+var email = document.querySelector('.email');
+var textArea = document.querySelector('.textarea');
+var form = document.querySelector('.contactForm');
 var submitBtn = document.querySelector('.input-control input');
 
 
@@ -32,35 +32,6 @@ hamburger.addEventListener('click', function () {
   hamburger.classList.toggle('active-hamburger');
   document.documentElement.classList.toggle('removeScroll');
 })
-
-// slider function
-slideBtn.forEach(function (staff) {
-  staff.addEventListener('click', function () {
-    var activeBtn = document.querySelector('.active-btn');
-    activeBtn.classList.remove('active-btn');
-    staff.classList.add('active-btn');
-    slider();
-  });
-});
-function slider(num) {
-  staffCards.scrollBy({
-    left: num,
-    behavior: 'smooth'
-  });
-}
-function cardSlider(size) {
-  nextBtn.addEventListener('click', function () {
-    slider(size);
-  })
-  prevBtn.addEventListener('click', function () {
-    slider(-size);
-  })
-}
-if (window.innerWidth > 769 && window.innerWidth <= 1440) {
-  cardSlider(821);
-} else if (window.innerWidth > 640 && window.innerWidth <= 768) {
-  cardSlider(690);
-}
 
 // submit function
 form.addEventListener('submit', function (e) {
@@ -87,11 +58,9 @@ form.addEventListener('submit', function (e) {
 });
 
 // error function
-
 for (var i = 0; i < 3; i++) {
   form.children[i].children[0].addEventListener('blur', validateError);
 }
-
 function validateError() {
   this.nextElementSibling.classList.remove('show-error');
   this.classList.remove('error');
@@ -152,6 +121,7 @@ submitModal.addEventListener('click', function (e) {
     document.documentElement.classList.remove('removeScroll');
   };
 });
+
 
 
 
