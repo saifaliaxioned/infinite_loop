@@ -611,6 +611,7 @@ form,.contact-source { flex-basis: 44%; }
 
 .input-group {
   padding: 10px 0;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -649,9 +650,12 @@ input::placeholder,textarea::placeholder { color: rgb(253,250,255,0.8); }
 .input-control input:hover { background: rgb(81, 150, 202); }
 
 .err {
-  display: none;
   padding: 5px 0;
+  position: absolute;
+  bottom: -10px;
+  display: none;
   color: rgb(255,0 ,0);
+  font-size: 12px;
 }
 
 input.success,textarea.success { border-color: rgb(60,160,222); }
@@ -760,13 +764,14 @@ input.error,textarea.error { border-color: rgb(255,0 ,0); }
   padding: 20px;
   border-radius: 50px;
   position: absolute;
-  top: -18%;
-  left: 41%;
+  top: -16%;
+  left: 50%;
   background: rgb(52,118,168);
   color: rgb(255,255,255);
   font-family: 'FontAwesome';
   font-size: 45px;
-  box-shadow: 0 2px 5px rgb(0,0,0,.4);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 40%);
+  transform: translate(-50%, -6%);
 }
 
 .submitCancel-btn { width: 100%; padding: 30px 0 0 0; }
