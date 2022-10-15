@@ -898,13 +898,17 @@ footer p { font-size: 15px; }
   .para1, .para2 { font-size: 17px; }
   /* banner section end */
 
+  /* testimonial section start */
+  .testimonials .info p,.gallery .info p,.contact .info p { font-size: 12px; }
+  /* testimonial section end */
+
   /* gallery section start */
   .gallery-items { width: 65%; }
   .gallery-list { flex-basis: 100%; }
   /* gallery section end */
 
   /* contact section start */
-  .testimonials .info p,.gallery .info p,.contact .info p { font-size: 12px; }
+  .err { font-size: 10px; }
   /* contact section end */
 
   /* footer start */
