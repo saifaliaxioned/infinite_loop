@@ -43,6 +43,7 @@ form.addEventListener('submit', function (e) {
       form.children[i].children[0].classList.remove('success');
     }
     form.reset();
+    console.log('submit repeated');
   }
   else {
     var str = 'field is required';
@@ -127,7 +128,7 @@ $('.staff-cards').slick({
   arrows: false,
   infinite: true,
   autoplay: true,
-  speed: 300,
+  speed: 400,
   slidesToShow: 3,
   slidesToScroll: 3,
   responsive: [
@@ -137,12 +138,11 @@ $('.staff-cards').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        arrows: true,
         dots: true
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 770,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -167,7 +167,7 @@ $('.gallery-items').slick({
   arrows: false,
   infinite: true,
   autoplay: true,
-  speed: 300,
+  speed: 400,
   slidesToShow: 5,
   slidesToScroll: 3,
   responsive: [
@@ -177,12 +177,11 @@ $('.gallery-items').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        arrows: true,
         dots: true
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 769,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
