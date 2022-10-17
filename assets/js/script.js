@@ -73,7 +73,7 @@ function validateError() {
   var emailPattern = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
   isValid = true;
   try {
-    if (this.className == 'textInput') {
+    if (this.classList.contains('textInput')) {
       max = 50;
     }
     if (value === '') {
