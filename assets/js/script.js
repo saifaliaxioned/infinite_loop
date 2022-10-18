@@ -43,7 +43,7 @@ form.addEventListener('submit', function (e) {
       form.children[i].children[0].classList.remove('success');
     }
     form.reset();
-    console.log('submit repeated');
+    isValid = false;
   }
   else {
     var str = 'field is required';
