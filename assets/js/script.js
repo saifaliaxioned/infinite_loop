@@ -111,7 +111,7 @@ galleryList.forEach(function (list) {
   });
 });
 galleryModal.addEventListener('click', function (e) {
-  if (e.target === galleryModal || e.target === galleryModal.children[0] || e.target === galleryModal.children[0].children[0]) {
+  if (e.target === galleryModal || e.target === galleryModal.children[0].children[0].children[0]) {
     galleryModal.classList.add('hide-content');
     document.documentElement.classList.remove('removeScroll');
   };
@@ -190,7 +190,7 @@ $('.gallery-items').slick({
       }
     },
     {
-      breakpoint: 540,
+      breakpoint: 482,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
