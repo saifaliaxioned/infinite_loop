@@ -884,13 +884,16 @@ footer p { font-size: 15px; }
 /*media query for 640px starts here*/
 @media only screen and (max-width: 640px) {
 
+  /* testimonial section start */
   .staff-list {
    flex-basis: 95%;
    text-align: center;
   }
+  /* testimonial section end */
 
   /* gallery section start */
   .gallery-list { flex-basis: 47%; }
+  .modal-content { width: 54%; }
   /* gallery section end */
 
   /* contact section start */
